@@ -29,7 +29,7 @@ class Example(QtGui.QWidget):
 	self.l.setLineWrapMode(QtGui.QTextEdit.NoWrap)
 	self.l.moveCursor(QtGui.QTextCursor.End)
 	self.l.insertPlainText("#include<bits/stdc++.h> \n using namespace std;\n int main(){\n}")
-	self.l.setGeometry(10,10,500,700)
+	self.l.setGeometry(10,10,500,800)
 	sb=self.l.verticalScrollBar()
 	sb.setValue(sb.maximum()) 
 	
@@ -59,6 +59,7 @@ class Example(QtGui.QWidget):
         self.setGeometry(200, 100, 900, 800)
         self.setWindowTitle('C++ compiler')    
         self.show()
+	
     def onStart(self): 
 	st=self.l.toPlainText()
 	f=open("data.cpp","w")
@@ -83,10 +84,7 @@ class Example(QtGui.QWidget):
 	    print "jaypee"
 	    self.rd.setPlainText(sttt)
 	
-
-    
 def main():
-    
     app = QtGui.QApplication(sys.argv)
     ex = Example()
     sys.exit(app.exec_())
